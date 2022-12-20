@@ -1,3 +1,5 @@
-az vm show --name "myvmpoc1" --resource-group "my-poc" > test.csv
-az vm show --name "myvmpoc1" --resource-group "my-poc" | jq .osProfile.computerName
+instance = ""
+rgname = ""
+az vm show --name $instance --resource-group $rgname > test.csv
+az vm show --name $instance  --resource-group $rgname | jq .osProfile.computerName
  
